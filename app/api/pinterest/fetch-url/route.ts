@@ -44,10 +44,16 @@ export async function POST(request: NextRequest) {
       );
     }
     const html = await response.text();
+    console.log("STATUS:", response.status);
+    console.log("CONTENT TYPE:", response.headers.get("content-type"));
+    console.log("HTML LENGTH:", html.length);
+    console.log("HAS VIDEO:", html.includes("<video"));
+    console.log("HAS M3U8:", html.includes(".m3u8"));
+    console.log("HAS MP4:", html.includes(".mp4"));
     const $ = cheerio.load(html);
     const video = $("video").first();
-    console.log("value of html",$);
-    console.log("value of video", video);
+    console.log("VIDEO COUNT:", $("video").length);
+    console.log("HTML START:", html.substring(0, 1000));
     if (!video.length) {
       return NextResponse.json(
         {
