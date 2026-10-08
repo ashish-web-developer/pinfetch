@@ -46,6 +46,8 @@ export async function POST(request: NextRequest) {
     const html = await response.text();
     const $ = cheerio.load(html);
     const video = $("video").first();
+    console.log("value of html",$);
+    console.log("value of video", video);
     if (!video.length) {
       return NextResponse.json(
         {
