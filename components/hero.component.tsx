@@ -23,33 +23,33 @@ const Hero = () => {
   };
 
   return (
-    <section className="px-4 pb-24 pt-20 sm:px-6 sm:pt-28">
+    <section className="px-4 pt-20 pb-24 sm:px-6 sm:pt-28">
       <div className="mx-auto max-w-4xl text-center">
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-red-50 px-4 py-2 text-sm font-medium text-[#E60023]">
-          <span className="h-2 w-2 rounded-full bg-[#E60023]" />
+          <span className="bg-primary h-2 w-2 rounded-full" />
           Free Pinterest Video Downloader
         </div>
 
         {/* Heading */}
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
           Download Pinterest
-          <span className="block text-[#E60023]">videos in seconds.</span>
+          <span className="text-primary block">videos in seconds.</span>
         </h1>
 
         {/* Description */}
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-500 sm:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
           Download publicly available Pinterest videos quickly and easily. No
           account or registration required.
         </p>
 
         {/* Downloader */}
         <div className="mx-auto mt-10 max-w-2xl">
-          <div className="flex flex-col gap-2 rounded-2xl border border-gray-200 bg-white p-2 shadow-lg shadow-gray-100 sm:flex-row">
+          <div className="flex flex-col gap-2 rounded-xl border border-gray-300 bg-white p-2 sm:flex-row">
             <div className="relative flex-1">
               <LinkIcon
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-600"
               />
 
               <input
@@ -62,7 +62,7 @@ const Hero = () => {
                   }
                 }}
                 placeholder="Paste Pinterest URL here..."
-                className="h-12 w-full rounded-xl pl-11 pr-4 text-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-red-100"
+                className="h-12 w-full rounded-xl pr-4 pl-11 outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-red-100"
               />
             </div>
 
