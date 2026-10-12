@@ -7,7 +7,7 @@ import { SITE_NAME, SITE_TITLE } from "@/constants/site.constant";
 const Header = () => {
   return (
     <header className="relative z-50 px-3 pt-3 sm:px-6 sm:pt-5">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 sm:h-[64px]">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 sm:h-16">
         {/* Brand */}
         <Link
           href="/"
@@ -26,16 +26,16 @@ const Header = () => {
           </div>
 
           {/* Show a compact name on mobile, full lockup from sm up */}
-          <span className="truncate text-[15px] font-bold tracking-[-0.025em] text-gray-950 sm:hidden">
+          <span className="truncate text-[15px] font-bold tracking-tight text-gray-950 sm:hidden">
             {SITE_NAME}
           </span>
 
           <div className="hidden sm:block">
-            <div className="text-[15px] font-bold tracking-[-0.025em] text-gray-950">
+            <div className="text-[15px] font-bold tracking-tight text-gray-950">
               {SITE_NAME}
             </div>
 
-            <div className="mt-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-gray-400">
+            <div className="mt-1 text-[9px] font-semibold tracking-[0.14em] text-gray-400 uppercase">
               Pinterest Downloader
             </div>
           </div>
@@ -62,7 +62,7 @@ const Header = () => {
 
           <Link
             href="#downloader"
-            className="group inline-flex h-9 items-center gap-1.5 rounded-xl bg-[#E60023] px-3.5 text-[13px] font-semibold text-white shadow-[0_3px_10px_rgba(230,0,35,0.16)] transition-all duration-200 hover:-translate-y-px hover:bg-[#d50021] hover:shadow-[0_5px_14px_rgba(230,0,35,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300 focus-visible:ring-offset-2 sm:px-4 md:ml-1"
+            className="group inline-flex h-9 items-center gap-1.5 rounded-xl bg-primary px-3.5 text-[13px] font-semibold text-white shadow-[0_3px_10px_rgba(230,0,35,0.16)] transition-all duration-200 hover:-translate-y-px hover:bg-[#d50021] hover:shadow-[0_5px_14px_rgba(230,0,35,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300 focus-visible:ring-offset-2 sm:px-4 md:ml-1"
           >
             Download
             <span

@@ -1,3 +1,6 @@
+// const
+import { SITE_NAME } from "@/constants/site.constant";
+
 const steps = [
   {
     number: "01",
@@ -9,7 +12,7 @@ const steps = [
   {
     number: "02",
     label: "PASTE",
-    title: "Drop the link into PinFetch",
+    title: `Drop the link into ${SITE_NAME}`,
     description:
       "Paste the copied URL into the downloader. No account, login, or extra steps.",
   },
@@ -36,14 +39,14 @@ const HowItWorks = () => {
             <div className="mb-4 flex items-center gap-3 sm:mb-5">
               <span className="size-2 rounded-full bg-[#E60023]" />
 
-              <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400 sm:text-xs sm:tracking-[0.18em]">
+              <span className="text-[11px] font-bold tracking-[0.14em] text-gray-400 uppercase sm:text-xs sm:tracking-[0.18em]">
                 How it works
               </span>
             </div>
 
             <h2
               id="how-it-works-heading"
-              className="max-w-2xl text-[2rem] font-bold leading-[1.08] tracking-[-0.045em] text-gray-950 sm:text-5xl sm:leading-[1.05]"
+              className="max-w-2xl text-[2rem] leading-[1.08] font-bold tracking-[-0.045em] text-gray-950 sm:text-5xl sm:leading-[1.05]"
             >
               Three steps.
               <br />
@@ -52,7 +55,7 @@ const HowItWorks = () => {
           </div>
 
           <p className="max-w-sm text-sm leading-6 text-gray-500 sm:text-right">
-            PinFetch keeps the process simple. No account. No unnecessary
+            {SITE_NAME} keeps the process simple. No account. No unnecessary
             steps. Just paste and download.
           </p>
         </div>
@@ -68,14 +71,14 @@ const HowItWorks = () => {
                 {/* Number */}
                 <span
                   aria-hidden="true"
-                  className="row-span-2 select-none self-start text-5xl font-black leading-none tracking-[-0.08em] text-gray-200 transition-colors duration-300 group-hover:text-red-100 sm:row-span-1 sm:self-center sm:text-8xl sm:text-gray-100 sm:group-hover:text-red-50"
+                  className="row-span-2 self-start text-5xl leading-none font-black tracking-[-0.08em] text-gray-200 transition-colors duration-300 select-none group-hover:text-red-100 sm:row-span-1 sm:self-center sm:text-8xl sm:text-gray-100 sm:group-hover:text-red-50"
                 >
                   {step.number}
                 </span>
 
                 {/* Title */}
                 <div className="min-w-0">
-                  <div className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E60023] sm:mb-2">
+                  <div className="mb-1.5 text-[10px] font-bold tracking-[0.2em] text-[#E60023] uppercase sm:mb-2">
                     <span className="sr-only">Step {index + 1}: </span>
                     {step.label}
                   </div>

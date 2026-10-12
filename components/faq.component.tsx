@@ -1,3 +1,5 @@
+import { SITE_NAME } from "@/constants/site.constant";
+
 const faqs = [
   {
     question: "Do I need a Pinterest account?",
@@ -5,13 +7,12 @@ const faqs = [
       "No. You can paste a publicly accessible Pinterest Pin URL without logging in.",
   },
   {
-    question: "Is PinFetch free?",
+    question: `Is ${SITE_NAME} free?`,
     answer: "Yes. The basic downloader is free to use.",
   },
   {
     question: "Can I use it on my phone?",
-    answer:
-      "Yes. PinFetch is designed to work on mobile, tablet, and desktop devices.",
+    answer: `Yes. ${SITE_NAME} is designed to work on mobile, tablet, and desktop devices.`,
   },
   {
     question: "What format are the videos saved in?",
@@ -20,8 +21,7 @@ const faqs = [
   },
   {
     question: "Can I download videos from private Pins or boards?",
-    answer:
-      "No. PinFetch only works with publicly accessible Pins. If a Pin needs a login to view, it can't be fetched.",
+    answer: `No. ${SITE_NAME} only works with publicly accessible Pins. If a Pin needs a login to view, it can't be fetched.`,
   },
   {
     question: "Can I reuse the videos I download?",
@@ -76,7 +76,7 @@ const FAQ = () => {
 
           <p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-gray-500">
             Everything you need to know about downloading Pinterest videos with
-            PinFetch.
+            {SITE_NAME}.
           </p>
         </div>
 

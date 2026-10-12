@@ -1,18 +1,21 @@
 import Downloader from "@/components/downloader.component";
 
+// const
+import { SITE_NAME } from "@/constants/site.constant";
+
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 sm:pb-32 sm:pt-20">
+    <section className="relative overflow-hidden px-4 pt-10 pb-16 sm:px-6 sm:pt-20 sm:pb-32">
       {/* Background */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
       >
-        <div className="absolute left-1/2 top-[-160px] size-[360px] -translate-x-1/2 rounded-full bg-red-50 blur-3xl sm:top-[-220px] sm:size-[620px]" />
+        <div className="absolute top-[-160px] left-1/2 size-[360px] -translate-x-1/2 rounded-full bg-red-50 blur-3xl sm:top-[-220px] sm:size-[620px]" />
 
-        <div className="absolute left-[-180px] top-[280px] hidden size-[360px] rounded-full border border-gray-100 sm:block" />
+        <div className="absolute top-[280px] left-[-180px] hidden size-[360px] rounded-full border border-gray-100 sm:block" />
 
-        <div className="absolute right-[-180px] top-[120px] hidden size-[360px] rounded-full border border-gray-100 sm:block" />
+        <div className="absolute top-[120px] right-[-180px] hidden size-[360px] rounded-full border border-gray-100 sm:block" />
       </div>
 
       <div className="mx-auto max-w-6xl">
@@ -20,21 +23,21 @@ const Hero = () => {
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           <span className="size-2 shrink-0 rounded-full bg-[#E60023]" />
 
-          <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400 sm:text-xs sm:tracking-[0.18em]">
+          <span className="text-[11px] font-bold tracking-[0.14em] text-gray-400 uppercase sm:text-xs sm:tracking-[0.18em]">
             Pinterest Video Downloader
           </span>
 
           <span className="hidden h-px w-10 bg-gray-200 sm:block" />
 
           <span className="hidden text-xs font-medium text-gray-400 sm:inline">
-            PinFetch
+            {SITE_NAME}
           </span>
         </div>
 
         <div className="mt-8 grid grid-cols-1 items-center gap-10 sm:mt-12 sm:gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           {/* Left */}
           <div className="min-w-0">
-            <h1 className="max-w-xl text-[2.25rem] font-bold leading-[1.05] tracking-[-0.045em] text-gray-950 sm:text-5xl sm:tracking-[-0.055em] md:text-6xl lg:text-[68px] lg:leading-[1]">
+            <h1 className="max-w-xl text-[2.25rem] leading-[1.05] font-bold tracking-[-0.045em] text-gray-950 sm:text-5xl sm:tracking-[-0.055em] md:text-6xl lg:text-[68px] lg:leading-[1]">
               Download the videos
               <span className="block text-[#E60023]">
                 you find on Pinterest.
@@ -42,8 +45,8 @@ const Hero = () => {
             </h1>
 
             <p className="mt-5 max-w-lg text-base leading-7 text-gray-500 sm:mt-7 sm:text-lg">
-              Paste a Pinterest video link and save it directly to your
-              device. Fast, simple, and without creating an account.
+              Paste a Pinterest video link and save it directly to your device.
+              Fast, simple, and without creating an account.
             </p>
 
             {/* Features */}
@@ -57,9 +60,7 @@ const Hero = () => {
 
               <div className="flex items-center gap-2">
                 <span className="size-1.5 rounded-full bg-green-500" />
-                <span className="text-xs font-medium text-gray-500">
-                  Free
-                </span>
+                <span className="text-xs font-medium text-gray-500">Free</span>
               </div>
 
               <div className="flex items-center gap-2">
@@ -85,7 +86,7 @@ const Hero = () => {
           <div id="downloader" className="relative min-w-0 scroll-mt-24">
             {/* Label */}
             <div className="mb-3 flex items-center justify-between gap-3">
-              <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-gray-400 sm:text-xs sm:tracking-[0.18em]">
+              <span className="text-[11px] font-bold tracking-[0.14em] text-gray-400 uppercase sm:text-xs sm:tracking-[0.18em]">
                 Download a video
               </span>
 
@@ -104,13 +105,9 @@ const Hero = () => {
 
             {/* Bottom details */}
             <div className="mt-4 flex items-center justify-between px-1">
-              <span className="text-xs text-gray-400">
-                No account required
-              </span>
+              <span className="text-xs text-gray-400">No account required</span>
 
-              <span className="text-xs font-medium text-gray-500">
-                MP4
-              </span>
+              <span className="text-xs font-medium text-gray-500">MP4</span>
             </div>
           </div>
         </div>
@@ -118,13 +115,11 @@ const Hero = () => {
         {/* Bottom divider */}
         <div className="mt-14 border-t border-gray-200 pt-5 sm:mt-24">
           <div className="flex items-center justify-between gap-3">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-300">
-              PinFetch
+            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-300 uppercase">
+              {SITE_NAME}
             </span>
 
-            <span className="text-xs text-gray-400">
-              Simple by design.
-            </span>
+            <span className="text-xs text-gray-400">Simple by design.</span>
           </div>
         </div>
       </div>
